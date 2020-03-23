@@ -36,7 +36,6 @@ A social media app targeted to climbers to have a platform to post their custom 
 * Login 
 * Register - User signs up or logs into their account
    * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person. 
-   * ...
 * Feed Screen
    * Feed of all posted moonboards
 * Posting Screen 
@@ -45,27 +44,11 @@ A social media app targeted to climbers to have a platform to post their custom 
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen)
-
-* Music selection
-* Profile
-* Settings
-
-Optional:
-* Music/Encounter Queue
-* Discover (Top Choices)
-
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account creation if no log in is available
-* Music Selection (Or Queue if Optional) -> Jumps to Chat
-* Profile -> Text field to be modified. 
-* Settings -> Toggle settings
+* Feed Scrolling -> Post page if button pressed
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
 
-### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
 
-### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
