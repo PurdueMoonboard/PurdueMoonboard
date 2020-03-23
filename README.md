@@ -51,4 +51,22 @@ A social media app targeted to climbers to have a platform to post their custom 
 ## Wireframes
 ![](https://github.com/PurdueMoonboard/PurdueMoonboard/blob/master/Wireframe.JPG)
 
+## Schema
+### Models
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | bio	   | String   | authors bio |
+   | authorLikes   | Number   | total number of likes authors posts receives |
+   | authorComments   | Number   | total number of comments authors posts receives |
+   | image         | File     | image that user posts |
+   | description   | String   | description of post |
+   | grade         | String   | grade descriptor of post |
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 
