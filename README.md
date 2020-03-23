@@ -49,6 +49,6 @@ A social media app targeted to climbers to have a platform to post their custom 
 * Feed Scrolling -> Post page if button pressed
 
 ## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
+![](https://github.com/PurdueMoonboard/PurdueMoonboard/blob/master/Wireframe.JPG)
 
 
