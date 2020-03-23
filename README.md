@@ -59,14 +59,24 @@ A social media app targeted to climbers to have a platform to post their custom 
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the user post (default field) |
    | author        | Pointer to User| image author |
-   | bio	   | String   | authors bio |
-   | authorLikes   | Number   | total number of likes authors posts receives |
-   | authorComments   | Number   | total number of comments authors posts receives |
    | image         | File     | image that user posts |
    | description   | String   | description of post |
    | grade         | String   | grade descriptor of post |
    | commentsCount | Number   | number of comments that has been posted to an image |
    | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   
+#### Profile
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | user          | Pointer to User   | current user  |
+   | userImage     | File     | User profile picture |
+   | bio	         | String   | authors bio |
+   | authorLikes   | Number   | total number of likes authors posts receives |
+   | authorComments   | Number   | total number of comments authors posts receives |
+   | image         | File     | images that user posts |
+   | grade         | String   | grade descriptor of post |
    | createdAt     | DateTime | date when post is created (default field) |
    | updatedAt     | DateTime | date when post is last updated (default field) |
  
@@ -76,8 +86,7 @@ A social media app targeted to climbers to have a platform to post their custom 
       - (Read/GET) Query all posts
          ```swift
         let query = PFQuery(className:"Posts")
-        query.includeKeys(["author","comments","comments.author"])
-        query.limit=20
+        query.includeKeys(["author","comments","comments.author","grade","description"])
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
             if let error = error { 
                print(error.localizedDescription)
