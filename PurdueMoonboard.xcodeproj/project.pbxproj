@@ -14,6 +14,8 @@
 		220CC3B42432A66800F711AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220CC3B32432A66800F711AA /* Assets.xcassets */; };
 		220CC3B72432A66800F711AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220CC3B52432A66800F711AA /* LaunchScreen.storyboard */; };
 		220CC3C22432A66800F711AA /* PurdueMoonboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CC3C12432A66800F711AA /* PurdueMoonboardTests.swift */; };
+		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
+		C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,12 @@
 		220CC3BD2432A66800F711AA /* PurdueMoonboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurdueMoonboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		220CC3C12432A66800F711AA /* PurdueMoonboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurdueMoonboardTests.swift; sourceTree = "<group>"; };
 		220CC3C32432A66800F711AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		A13FECCD74FA1FCC7818E383 /* Pods-PurdueMoonboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.release.xcconfig"; sourceTree = "<group>"; };
+		A4A06CBE112926F0F7F42F91 /* Pods-PurdueMoonboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.debug.xcconfig"; sourceTree = "<group>"; };
+		B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +74,8 @@
 				220CC3A92432A66500F711AA /* PurdueMoonboard */,
 				220CC3C02432A66800F711AA /* PurdueMoonboardTests */,
 				220CC3A82432A66500F711AA /* Products */,
+				E221079A116ACF11CEB21B5D /* Pods */,
+				A7CE872B2E32588AE25CC118 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +111,27 @@
 			path = PurdueMoonboardTests;
 			sourceTree = "<group>";
 		};
+		A7CE872B2E32588AE25CC118 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */,
+				50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E221079A116ACF11CEB21B5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4A06CBE112926F0F7F42F91 /* Pods-PurdueMoonboard.debug.xcconfig */,
+				A13FECCD74FA1FCC7818E383 /* Pods-PurdueMoonboard.release.xcconfig */,
+				B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */,
+				99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 220CC3C62432A66800F711AA /* Build configuration list for PBXNativeTarget "PurdueMoonboard" */;
 			buildPhases = (
+				05995541DBCCC077A9D3100B /* [CP] Check Pods Manifest.lock */,
 				220CC3A32432A66500F711AA /* Sources */,
 				220CC3A42432A66500F711AA /* Frameworks */,
 				220CC3A52432A66500F711AA /* Resources */,
+				F26CAE39F498628ADD62C6CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 220CC3C92432A66800F711AA /* Build configuration list for PBXNativeTarget "PurdueMoonboardTests" */;
 			buildPhases = (
+				A5AAEF236520FCE37F88ED68 /* [CP] Check Pods Manifest.lock */,
 				220CC3B92432A66800F711AA /* Sources */,
 				220CC3BA2432A66800F711AA /* Frameworks */,
 				220CC3BB2432A66800F711AA /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05995541DBCCC077A9D3100B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurdueMoonboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AAEF236520FCE37F88ED68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PurdueMoonboardTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26CAE39F498628ADD62C6CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		220CC3A32432A66500F711AA /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		220CC3C72432A66800F711AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A06CBE112926F0F7F42F91 /* Pods-PurdueMoonboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +479,7 @@
 		};
 		220CC3C82432A66800F711AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A13FECCD74FA1FCC7818E383 /* Pods-PurdueMoonboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		220CC3CA2432A66800F711AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +521,7 @@
 		};
 		220CC3CB2432A66800F711AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
