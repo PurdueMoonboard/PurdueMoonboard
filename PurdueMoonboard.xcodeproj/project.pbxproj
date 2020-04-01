@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		220CC3AB2432A66500F711AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CC3AA2432A66500F711AA /* AppDelegate.swift */; };
 		220CC3AD2432A66500F711AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CC3AC2432A66500F711AA /* SceneDelegate.swift */; };
-		220CC3AF2432A66500F711AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CC3AE2432A66500F711AA /* ViewController.swift */; };
 		220CC3B22432A66500F711AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220CC3B02432A66500F711AA /* Main.storyboard */; };
 		220CC3B42432A66800F711AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220CC3B32432A66800F711AA /* Assets.xcassets */; };
 		220CC3B72432A66800F711AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220CC3B52432A66800F711AA /* LaunchScreen.storyboard */; };
 		220CC3C22432A66800F711AA /* PurdueMoonboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220CC3C12432A66800F711AA /* PurdueMoonboardTests.swift */; };
+		229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ECD7F24354B5A00C89402 /* LoginViewController.swift */; };
 		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
 		C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,6 @@
 		220CC3A72432A66500F711AA /* PurdueMoonboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurdueMoonboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220CC3AA2432A66500F711AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		220CC3AC2432A66500F711AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		220CC3AE2432A66500F711AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		220CC3B12432A66500F711AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		220CC3B32432A66800F711AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		220CC3B62432A66800F711AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		220CC3BD2432A66800F711AA /* PurdueMoonboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurdueMoonboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		220CC3C12432A66800F711AA /* PurdueMoonboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurdueMoonboardTests.swift; sourceTree = "<group>"; };
 		220CC3C32432A66800F711AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		229ECD7F24354B5A00C89402 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 			children = (
 				220CC3AA2432A66500F711AA /* AppDelegate.swift */,
 				220CC3AC2432A66500F711AA /* SceneDelegate.swift */,
-				220CC3AE2432A66500F711AA /* ViewController.swift */,
+				229ECD7F24354B5A00C89402 /* LoginViewController.swift */,
 				220CC3B02432A66500F711AA /* Main.storyboard */,
 				220CC3B32432A66800F711AA /* Assets.xcassets */,
 				220CC3B52432A66800F711AA /* LaunchScreen.storyboard */,
@@ -128,7 +128,6 @@
 				B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */,
 				99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220CC3AF2432A66500F711AA /* ViewController.swift in Sources */,
+				229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */,
 				220CC3AB2432A66500F711AA /* AppDelegate.swift in Sources */,
 				220CC3AD2432A66500F711AA /* SceneDelegate.swift in Sources */,
 			);
