@@ -106,3 +106,6 @@ A social media app targeted to climbers to have a platform to post their custom 
       - (Read/GET) Query logged in user object
       - (Update/PUT) Update user profile image
       - (Update/PUT) Update user bio description
+### App Walkthough GIF Sprint 1
+
+<img src="http://g.recordit.co/5tFYDzhN5v.gif" width=250><br>
