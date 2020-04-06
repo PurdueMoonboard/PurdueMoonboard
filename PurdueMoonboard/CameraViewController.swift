@@ -26,7 +26,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["author"] = PFUser.current()
         
         let imageData = imageView.image!.pngData()
-        var imageName:String = "\(Int.random(in:  0..<1000000))image.png"
+        let imageName:String = "\(Int.random(in:  0..<1000000))image.png"
         let file = PFFileObject(name: imageName, data: imageData!)
         
         post["image"] = file
@@ -35,6 +35,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post.saveInBackground { (success, error) in
             if success {
                 self.dismiss(animated: true, completion: nil)
+                
                 print("saved")
             } else {
                 print("notsaved error")

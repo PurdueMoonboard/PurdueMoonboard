@@ -30,7 +30,7 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        print("viewDidAppear called")
         let query = PFQuery(className: "Posts")
         query.includeKeys(["author", "comments", "comments.author"])
         query.limit = 20
