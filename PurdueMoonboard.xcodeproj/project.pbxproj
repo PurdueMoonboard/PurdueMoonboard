@@ -20,6 +20,9 @@
 		229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ECD7F24354B5A00C89402 /* LoginViewController.swift */; };
 		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
 		C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */; };
+		E791C223243AC7FC00D6B059 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C222243AC7FC00D6B059 /* Profile.storyboard */; };
+		E791C225243AC81C00D6B059 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C224243AC81C00D6B059 /* Search.storyboard */; };
+		E791C227243AC83200D6B059 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C226243AC83200D6B059 /* Feed.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		A13FECCD74FA1FCC7818E383 /* Pods-PurdueMoonboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.release.xcconfig"; sourceTree = "<group>"; };
 		A4A06CBE112926F0F7F42F91 /* Pods-PurdueMoonboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.debug.xcconfig"; sourceTree = "<group>"; };
 		B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E791C222243AC7FC00D6B059 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		E791C224243AC81C00D6B059 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		E791C226243AC83200D6B059 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 				229ECD7F24354B5A00C89402 /* LoginViewController.swift */,
 				220CC3B02432A66500F711AA /* Main.storyboard */,
 				2242BFF1243A944C0052A4F8 /* MainFeed.storyboard */,
+				E791C226243AC83200D6B059 /* Feed.storyboard */,
+				E791C224243AC81C00D6B059 /* Search.storyboard */,
+				E791C222243AC7FC00D6B059 /* Profile.storyboard */,
 				2242BFF5243A961C0052A4F8 /* CameraViewController.swift */,
 				2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */,
 				2242BFF3243A949F0052A4F8 /* MainFeedViewController.swift */,
@@ -228,8 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				220CC3B72432A66800F711AA /* LaunchScreen.storyboard in Resources */,
+				E791C227243AC83200D6B059 /* Feed.storyboard in Resources */,
 				220CC3B42432A66800F711AA /* Assets.xcassets in Resources */,
+				E791C223243AC7FC00D6B059 /* Profile.storyboard in Resources */,
 				220CC3B22432A66500F711AA /* Main.storyboard in Resources */,
+				E791C225243AC81C00D6B059 /* Search.storyboard in Resources */,
 				2242BFF2243A944C0052A4F8 /* MainFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
