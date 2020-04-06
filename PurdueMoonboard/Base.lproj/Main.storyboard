@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="-169.56521739130437" y="40.178571428571423"/>
         </scene>
-        <!--MainFeedNavigationViewController-->
+        <!--TabNavigationController-->
         <scene sceneID="UxU-Nr-hKS">
             <objects>
-                <viewControllerPlaceholder storyboardName="MainFeed" referencedIdentifier="MainFeedNavigationViewController" id="5aU-pn-6aw" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MainFeed" referencedIdentifier="TabNavigationController" id="5aU-pn-6aw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EH8-dU-HME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485" y="-19"/>
