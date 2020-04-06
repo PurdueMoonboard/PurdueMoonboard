@@ -70,20 +70,20 @@
                     <connections>
                         <outlet property="passwordField" destination="db1-66-HkS" id="9bt-03-l2R"/>
                         <outlet property="usernameField" destination="hbt-ym-7ey" id="Zbd-N6-XSe"/>
-                        <segue destination="c5t-zT-Px9" kind="presentation" identifier="loginSegue" id="hri-cJ-1Qq"/>
+                        <segue destination="5aU-pn-6aw" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="CbR-MW-8Lt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-169.56521739130437" y="40.178571428571423"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="5KK-ID-dtu">
+        <!--MainFeedNavigationViewController-->
+        <scene sceneID="UxU-Nr-hKS">
             <objects>
-                <viewControllerPlaceholder id="c5t-zT-Px9" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I0c-PL-mNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MainFeed" referencedIdentifier="MainFeedNavigationViewController" id="5aU-pn-6aw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EH8-dU-HME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="-56"/>
+            <point key="canvasLocation" x="485" y="-19"/>
         </scene>
     </scenes>
 </document>
