@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "MainFeed", bundle: nil)
             self.window = UIWindow(windowScene: windowScene)
-            self.window?.rootViewController = main.instantiateViewController(identifier: "MainFeedNavigationViewController")
+            self.window?.rootViewController = main.instantiateViewController(identifier: "TabNavigationController")
             self.window?.makeKeyAndVisible()
             
         
