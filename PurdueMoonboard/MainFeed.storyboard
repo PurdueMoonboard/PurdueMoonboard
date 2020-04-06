@@ -71,9 +71,14 @@
                         <viewLayoutGuide key="safeArea" id="n21-Io-Ln8"/>
                     </view>
                     <navigationItem key="navigationItem" id="NGa-fu-Up0">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="QUa-pI-nWe">
+                            <connections>
+                                <action selector="onLogout:" destination="cnw-N0-5g4" id="izW-8l-7FS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="+" id="gt7-9k-J7c">
                             <connections>
-                                <segue destination="vDz-Xq-Kxi" kind="presentation" modalPresentationStyle="fullScreen" id="1Cb-9V-EWQ"/>
+                                <segue destination="vDz-Xq-Kxi" kind="presentation" modalPresentationStyle="automatic" id="1Cb-9V-EWQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -90,7 +95,7 @@
             <objects>
                 <viewController id="vDz-Xq-Kxi" customClass="CameraViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wT-9W-iZ6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-hL-EmE">
@@ -119,6 +124,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dje-3G-bDs"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentField" destination="aH1-Oz-mSj" id="UEQ-QW-O5l"/>
                         <outlet property="imageView" destination="Nwm-hL-EmE" id="Gly-Yb-A3R"/>
