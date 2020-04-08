@@ -18,6 +18,7 @@
 		2242BFF6243A961C0052A4F8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242BFF5243A961C0052A4F8 /* CameraViewController.swift */; };
 		2242BFF8243AA23E0052A4F8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */; };
 		229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ECD7F24354B5A00C89402 /* LoginViewController.swift */; };
+		22B4D110243E876600A9EC8A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4D10F243E876600A9EC8A /* CommentCell.swift */; };
 		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
 		C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */; };
 		E791C223243AC7FC00D6B059 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C222243AC7FC00D6B059 /* Profile.storyboard */; };
@@ -51,6 +52,7 @@
 		2242BFF5243A961C0052A4F8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		229ECD7F24354B5A00C89402 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22B4D10F243E876600A9EC8A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C95AD779744074B2709631 /* Pods-PurdueMoonboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				2242BFF5243A961C0052A4F8 /* CameraViewController.swift */,
 				2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */,
 				2242BFF3243A949F0052A4F8 /* MainFeedViewController.swift */,
+				22B4D10F243E876600A9EC8A /* CommentCell.swift */,
 				220CC3B32432A66800F711AA /* Assets.xcassets */,
 				220CC3B52432A66800F711AA /* LaunchScreen.storyboard */,
 				220CC3B82432A66800F711AA /* Info.plist */,
@@ -330,6 +333,7 @@
 				2242BFF4243A949F0052A4F8 /* MainFeedViewController.swift in Sources */,
 				2242BFF6243A961C0052A4F8 /* CameraViewController.swift in Sources */,
 				2242BFF8243AA23E0052A4F8 /* PostTableViewCell.swift in Sources */,
+				22B4D110243E876600A9EC8A /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

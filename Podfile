@@ -8,6 +8,7 @@ target 'PurdueMoonboard' do
   # Pods for PurdueMoonboard
   pod "Parse"
   pod "AlamofireImage"
+  pod "MessageInputBar"
 
   target 'PurdueMoonboardTests' do
     inherit! :search_paths
