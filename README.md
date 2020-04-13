@@ -109,3 +109,7 @@ A social media app targeted to climbers to have a platform to post their custom 
 ### App Walkthough GIF Sprint 1
 
 <img src="http://g.recordit.co/5tFYDzhN5v.gif" width=250><br>
+
+### App Walkthough GIF Sprint 2
+
+<img src="http://g.recordit.co/Ebba2qsu0e.gif" width=250><br>
