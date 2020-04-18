@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     fileprivate let headerId = "headerId"
     
     var posts = [PFObject]()
+    var user = [PFObject]()
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -40,6 +41,14 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
             }
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
+        
+        header.Username.text = PFUser.current()?.username
+        return header
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
     }
