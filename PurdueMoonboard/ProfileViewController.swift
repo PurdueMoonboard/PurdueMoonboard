@@ -29,7 +29,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         super.viewDidAppear(animated)
         print("viewDidAppear called")
         let query = PFQuery(className: "Posts")
-        query.includeKeys(["author", "comments", "comments.author"])
+        query.whereKey("author", equalTo: PFUser.current()!)
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -48,17 +48,14 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         let post = posts[indexPath.item]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileGridCell", for: indexPath) as! ProfileGridCell
-        let user = post["author"] as! PFUser
 
-        print(user.username)
-        if user.username == PFUser.current()?.username{
-            let imageFile = post["image"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
             
             
-            cell.posterView.af_setImage(withURL: url)
-        }
+        cell.posterView.af_setImage(withURL: url)
+        
         return cell
     }
 
