@@ -15,31 +15,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S09-aT-TSh">
-                                <rect key="frame" x="20" y="119" width="374" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="S09-aT-TSh">
+                                <rect key="frame" x="8" y="135" width="398" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HUz-3C-a6T">
-                                <rect key="frame" x="20" y="88" width="374" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HUz-3C-a6T">
+                                <rect key="frame" x="8" y="96" width="398" height="32"/>
                                 <segments>
                                     <segment title="Username"/>
                                     <segment title="Route Name"/>
                                     <segment title="VGrade"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onValueChange:" destination="6E5-Rf-TiW" eventType="valueChanged" id="l5U-HQ-JEH"/>
+                                </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-zh-lws">
-                                <rect key="frame" x="18" y="154" width="378" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-zh-lws">
+                                <rect key="frame" x="6" y="135" width="402" height="31"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="S09-aT-TSh" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="JkB-8Q-tRp"/>
+                            <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="S09-aT-TSh" secondAttribute="trailing" constant="8" id="K0X-ak-Sc0"/>
+                            <constraint firstItem="HUz-3C-a6T" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="NTJ-A1-ycT"/>
+                            <constraint firstItem="jT9-zh-lws" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="Pa2-hy-1kK"/>
+                            <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="HUz-3C-a6T" secondAttribute="trailing" constant="8" id="Snd-3g-vU1"/>
+                            <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="jT9-zh-lws" secondAttribute="trailing" constant="8" id="Yvr-WP-jXH"/>
+                            <constraint firstItem="S09-aT-TSh" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="ac1-7j-4bw"/>
+                            <constraint firstItem="jT9-zh-lws" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="bmp-yN-NZ7"/>
+                            <constraint firstItem="HUz-3C-a6T" firstAttribute="top" secondItem="HIT-P3-Jsz" secondAttribute="top" constant="8" id="hWn-V7-0qQ"/>
+                            <constraint firstItem="S09-aT-TSh" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="rHS-mi-h8O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HIT-P3-Jsz"/>
                     </view>
                     <navigationItem key="navigationItem" id="mRG-A6-0Dc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ry-Gk-peR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6E5-Rf-TiW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="-3.3482142857142856"/>
         </scene>

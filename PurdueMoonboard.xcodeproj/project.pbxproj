@@ -21,6 +21,7 @@
 		22B4D110243E876600A9EC8A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4D10F243E876600A9EC8A /* CommentCell.swift */; };
 		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
 		C5FD4A041CAC77955E653CD5 /* Pods_PurdueMoonboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */; };
+		C7AFCD40244D3CAB00B4A558 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AFCD3F244D3CAB00B4A558 /* SearchViewController.swift */; };
 		C7FE1A042443EFDD00C4E797 /* DetailedPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FE1A032443EFDD00C4E797 /* DetailedPost.storyboard */; };
 		E78347822447C2E800A3A4F8 /* ProfileGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78347812447C2E800A3A4F8 /* ProfileGridCell.swift */; };
 		E78347842447C4E800A3A4F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78347832447C4E800A3A4F8 /* ProfileViewController.swift */; };
@@ -63,6 +64,7 @@
 		A13FECCD74FA1FCC7818E383 /* Pods-PurdueMoonboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.release.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.release.xcconfig"; sourceTree = "<group>"; };
 		A4A06CBE112926F0F7F42F91 /* Pods-PurdueMoonboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboard.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboard/Pods-PurdueMoonboard.debug.xcconfig"; sourceTree = "<group>"; };
 		B988A1E6C7B0119C17B96F00 /* Pods-PurdueMoonboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurdueMoonboardTests.debug.xcconfig"; path = "Target Support Files/Pods-PurdueMoonboardTests/Pods-PurdueMoonboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7AFCD3F244D3CAB00B4A558 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C7FE1A032443EFDD00C4E797 /* DetailedPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailedPost.storyboard; sourceTree = "<group>"; };
 		E78347812447C2E800A3A4F8 /* ProfileGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGridCell.swift; sourceTree = "<group>"; };
 		E78347832447C4E800A3A4F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				E791C226243AC83200D6B059 /* Feed.storyboard */,
 				C7FE1A032443EFDD00C4E797 /* DetailedPost.storyboard */,
 				E791C224243AC81C00D6B059 /* Search.storyboard */,
+				C7AFCD3F244D3CAB00B4A558 /* SearchViewController.swift */,
 				E791C222243AC7FC00D6B059 /* Profile.storyboard */,
 				E7AC1D6A244ABA360054131F /* ProfileHeaderView.swift */,
 				E78347832447C4E800A3A4F8 /* ProfileViewController.swift */,
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */,
+				C7AFCD40244D3CAB00B4A558 /* SearchViewController.swift in Sources */,
 				220CC3AB2432A66500F711AA /* AppDelegate.swift in Sources */,
 				220CC3AD2432A66500F711AA /* SceneDelegate.swift in Sources */,
 				2242BFF4243A949F0052A4F8 /* MainFeedViewController.swift in Sources */,
