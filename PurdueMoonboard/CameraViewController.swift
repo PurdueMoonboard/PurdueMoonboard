@@ -9,18 +9,43 @@
 import UIKit
 import AlamofireImage
 import Parse
+import MessageInputBar
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MessageInputBarDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var vGradeLabel: UILabel!
     @IBOutlet weak var routeNameField: UITextField!
+    
+    var commentBar = MessageInputBar()
+    var showsCommentBar = false
+    var currentField: UITextField!
+    var openingCamera = false
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        commentBar.inputTextView.placeholder = "Add a comment..."
+        commentBar.sendButton.title = "Set"
+        commentBar.delegate = self
+        
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object:  nil)
     }
+    override var inputAccessoryView: UIView? {
+        if !openingCamera {
+            return commentBar
+        } else {
+            return nil
+        }
+    }
+    override var canBecomeFirstResponder: Bool {
+        return showsCommentBar
+    }
+    
     @IBAction func onSubmitButton(_ sender: Any) {
         let post = PFObject(className: "Posts")
         
@@ -46,14 +71,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
     }
+    
     @IBAction func onCameraButton(_ sender: Any) {
+        
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
         
+        openingCamera = true
         picker.sourceType = .photoLibrary
-        
+        picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true, completion: nil)
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -66,6 +95,44 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func keyboardWillBeHidden(note: Notification) {
+           commentBar.inputTextView.text = nil
+           showsCommentBar = false
+           becomeFirstResponder()
+    }
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        currentField.text = text
+        //Clear and dismiss input bar
+        commentBar.inputTextView.text = nil
+        showsCommentBar = false
+        becomeFirstResponder()
+        commentBar.inputTextView.resignFirstResponder()
+    }
+    @IBAction func onRouteName(_ sender: UITextField) {
+        openingCamera = false
+        currentField = sender
+        showsCommentBar = true
+        sender.becomeFirstResponder()
+        sender.resignFirstResponder()
+        commentBar.inputTextView.becomeFirstResponder()
+        if self.traitCollection.userInterfaceStyle == .dark {
+            commentBar.inputTextView.textColor = .black
+        }
+        
+        
+    }
+    @IBAction func onCaption(_ sender: UITextField) {
+        openingCamera = false
+        currentField = sender
+        showsCommentBar = true
+        sender.becomeFirstResponder()
+        sender.resignFirstResponder()
+        commentBar.inputTextView.becomeFirstResponder()
+        if self.traitCollection.userInterfaceStyle == .dark {
+            commentBar.inputTextView.textColor = .black
+        }
     }
     
     @IBAction func onSlider(_ sender: UISlider) {
