@@ -242,6 +242,13 @@
                                     <action selector="onSubmitButton:" destination="vDz-Xq-Kxi" eventType="touchUpInside" id="IcM-vz-te7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyH-Vp-HRL">
+                                <rect key="frame" x="183" y="659" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="vDz-Xq-Kxi" eventType="touchUpInside" id="yoA-LF-JZk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -257,8 +264,10 @@
                             <constraint firstItem="N5h-bc-Flu" firstAttribute="bottom" secondItem="wra-S9-x1o" secondAttribute="bottom" id="Zd8-ik-6k5"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="LJZ-HE-Ssp" secondAttribute="leading" id="aso-pL-BwI"/>
                             <constraint firstItem="Nwm-hL-EmE" firstAttribute="centerX" secondItem="LJZ-HE-Ssp" secondAttribute="centerX" id="cyy-jE-Tsq"/>
+                            <constraint firstItem="dje-3G-bDs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EyH-Vp-HRL" secondAttribute="bottom" constant="8" id="gLJ-i0-V2O"/>
                             <constraint firstItem="Yey-Wf-Uy7" firstAttribute="top" secondItem="Nwm-hL-EmE" secondAttribute="bottom" constant="7.6666666666666856" id="h4N-cs-h8F"/>
                             <constraint firstItem="N5h-bc-Flu" firstAttribute="top" secondItem="wra-S9-x1o" secondAttribute="top" id="jhc-Ko-flV"/>
+                            <constraint firstItem="EyH-Vp-HRL" firstAttribute="centerX" secondItem="LJZ-HE-Ssp" secondAttribute="centerX" id="jre-TJ-GZJ"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="Yey-Wf-Uy7" secondAttribute="leading" id="kmJ-fM-Er5"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="EIW-aq-D7p" secondAttribute="leading" id="kyW-4q-GWZ"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="wra-S9-x1o" secondAttribute="leading" id="mgo-fY-O47"/>
@@ -266,6 +275,7 @@
                             <constraint firstItem="dje-3G-bDs" firstAttribute="trailing" secondItem="Nwm-hL-EmE" secondAttribute="trailing" constant="8" id="rrE-S4-8US"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="5wT-9W-iZ6" secondAttribute="leadingMargin" id="teS-hd-yoa"/>
                             <constraint firstItem="N5h-bc-Flu" firstAttribute="leading" secondItem="wra-S9-x1o" secondAttribute="trailing" constant="45" id="ugt-Qa-b4a"/>
+                            <constraint firstItem="EyH-Vp-HRL" firstAttribute="top" secondItem="LJZ-HE-Ssp" secondAttribute="bottom" constant="8" id="woT-Bw-Hki"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="top" secondItem="glD-wf-2BW" secondAttribute="bottom" constant="8" symbolic="YES" id="xb9-aO-g0s"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="leading" secondItem="M1O-GP-BOe" secondAttribute="leading" id="yUX-Hf-uVo"/>
                             <constraint firstItem="aH1-Oz-mSj" firstAttribute="trailing" secondItem="N5h-bc-Flu" secondAttribute="trailing" id="ys4-KR-agX"/>

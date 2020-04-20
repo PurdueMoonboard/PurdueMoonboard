@@ -64,6 +64,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func onSlider(_ sender: UISlider) {
         let currentValue = Int(sender.value)
