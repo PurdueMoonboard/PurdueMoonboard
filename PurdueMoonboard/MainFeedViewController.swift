@@ -40,7 +40,7 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidAppear(animated)
         print("viewDidAppear called")
         let query = PFQuery(className: "Posts")
-        query.includeKeys(["author", "comments", "comments.author"])
+        query.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -77,7 +77,9 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
             
             let user = post["author"] as! PFUser
             cell.usernameLabel.text = user.username
-            
+            cell.vGrade.text = post["VGrade"] as? String
+            cell.vGrade.textColor = findVGradeColor(vGrade: cell.vGrade.text ?? "V0")
+            cell.routeName.text = post["route_name"] as? String
             cell.commentLabel.text = post["caption"] as? String
             
             let imageFile = post["image"] as! PFFileObject
@@ -135,7 +137,7 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        // Create the comment
+        
         let comment = PFObject(className: "Comments")
         comment["text"] = text
         comment["post"] = selectedPost
@@ -156,6 +158,27 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
         showsCommentBar = false
         becomeFirstResponder()
         commentBar.inputTextView.resignFirstResponder()
+    }
+    
+    
+    func findVGradeColor(vGrade: String) -> UIColor{
+        var mutatedGrade = vGrade
+        mutatedGrade.remove(at: mutatedGrade.firstIndex(of: "V") ?? mutatedGrade.startIndex)
+        
+        let grade = Int(mutatedGrade) ?? 0
+        if grade < 1 {
+            return .purple
+        } else if grade < 3 {
+            return .blue
+        } else if grade < 5 {
+            return .green
+        } else if grade < 6 {
+            return .yellow
+        } else if grade < 9 {
+            return .red
+        } else {
+            return .orange
+        }
     }
     /*
     // MARK: - Navigation

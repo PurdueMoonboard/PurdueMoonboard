@@ -12,6 +12,8 @@ class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var vGrade: UILabel!
+    @IBOutlet weak var routeName: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

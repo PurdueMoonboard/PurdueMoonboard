@@ -14,6 +14,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var vGradeLabel: UILabel!
+    @IBOutlet weak var routeNameField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func onSubmitButton(_ sender: Any) {
         let post = PFObject(className: "Posts")
         
+        post["VGrade"] = vGradeLabel.text!
+        post["route_name"] = routeNameField.text!
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()
         
@@ -61,7 +65,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func onSlider(_ sender: UISlider) {
+        let currentValue = Int(sender.value)
+        if currentValue < 1 {
+            vGradeLabel.textColor = .purple
+        } else if currentValue < 3 {
+            vGradeLabel.textColor = .blue
+        } else if currentValue < 5 {
+            vGradeLabel.textColor = .green
+        } else if currentValue < 6 {
+            vGradeLabel.textColor = .yellow
+        } else if currentValue < 9 {
+            vGradeLabel.textColor = .red
+        } else {
+            vGradeLabel.textColor = .orange
+        }
+        vGradeLabel.text = "V\(currentValue)"
+    }
+    
     /*
     // MARK: - Navigation
 
