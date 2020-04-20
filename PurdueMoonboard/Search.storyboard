@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="wO1-if-nFn">
             <objects>
-                <viewController id="kxz-NY-d4T" sceneMemberID="viewController">
+                <viewController id="kxz-NY-d4T" customClass="SearchViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFq-XN-WAU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,7 @@
                                 </segments>
                                 <connections>
                                     <action selector="onValueChange:" destination="6E5-Rf-TiW" eventType="valueChanged" id="l5U-HQ-JEH"/>
+                                    <action selector="onValueChanged:" destination="kxz-NY-d4T" eventType="valueChanged" id="7MV-2L-CxY"/>
                                 </connections>
                             </segmentedControl>
                             <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-zh-lws">
@@ -50,6 +51,11 @@
                         <viewLayoutGuide key="safeArea" id="HIT-P3-Jsz"/>
                     </view>
                     <navigationItem key="navigationItem" id="mRG-A6-0Dc"/>
+                    <connections>
+                        <outlet property="gradeSlider" destination="jT9-zh-lws" id="j8v-pC-Xxs"/>
+                        <outlet property="searchBar" destination="S09-aT-TSh" id="MY0-1s-XiQ"/>
+                        <outlet property="searchTabs" destination="HUz-3C-a6T" id="Bz5-Ff-DIx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ry-Gk-peR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6E5-Rf-TiW" userLabel="Exit" sceneMemberID="exit"/>
