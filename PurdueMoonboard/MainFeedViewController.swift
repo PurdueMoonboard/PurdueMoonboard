@@ -79,7 +79,8 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
             cell.usernameLabel.text = user.username
             cell.vGrade.text = post["VGrade"] as? String
             cell.vGrade.textColor = findVGradeColor(vGrade: cell.vGrade.text ?? "V0")
-            cell.routeName.text = post["route_name"] as? String
+            let routeName = post["route_name"] as? String
+            cell.routeName.text = "Route: " + (routeName ?? "No Name")
             cell.commentLabel.text = post["caption"] as? String
             
             let imageFile = post["image"] as! PFFileObject
