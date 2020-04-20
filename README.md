@@ -21,14 +21,14 @@ A social media app targeted to climbers to have a platform to post their custom 
 
 **Required Must-have Stories**
 
-* User logs in to save and post moonboards
-* Feed for scrolling through different moonboards.
-* Posting screen to take the picture of the wall and add moonboard notation on top of it.
+[X] User logs in to save and post moonboards
+[X] Feed for scrolling through different moonboards.
+[X] Posting screen to take the picture of the wall and add moonboard notation on top of it.
 
 **Optional Nice-to-have Stories**
 
 * Page of top moonboards
-* Profile to show all created and liked moonboards
+[X] Profile to show all created and liked moonboards
 * Favorites tab 
 
 ### 2. Screen Archetypes
@@ -113,3 +113,6 @@ A social media app targeted to climbers to have a platform to post their custom 
 ### App Walkthough GIF Sprint 2
 
 <img src="http://g.recordit.co/Ebba2qsu0e.gif" width=250><br>
+### App Walkthough GIF Sprint 3
+
+<img src="http://g.recordit.co/H79KA8LWVD.gif" width=250><br>
