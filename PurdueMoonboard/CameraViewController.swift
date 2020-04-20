@@ -60,9 +60,31 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         post["image"] = file
         
+        let query = PFQuery(className: "UserInfo")
+        query.whereKey("username", equalTo: PFUser.current()!["username"] as Any)
+        query.findObjectsInBackground() { (objects, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let objects = objects {
+                print("got user info \(objects.count)")
+                for object in objects {
+                    object.add(post, forKey: "posts")
+                    object.saveInBackground { (succes, error) in
+                        if succes {
+                            print("post was saved")
+                        } else {
+                            print("Comment wasnt saved")
+                        }
+                    }
+                }
+                
+            }
+        }
+        
         
         post.saveInBackground { (success, error) in
             if success {
+                
                 self.dismiss(animated: true, completion: nil)
                 
                 print("saved")
@@ -70,6 +92,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 print("notsaved error")
             }
         }
+        
+        
+        
+        
     }
     
     @IBAction func onCameraButton(_ sender: Any) {

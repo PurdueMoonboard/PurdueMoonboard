@@ -41,10 +41,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     override func viewDidAppear(_ animated: Bool) {
         let postQuery = PFQuery(className: "Posts")
-        let userQuery = PFQuery(className: "Users")
+        let userQuery = PFQuery(className: "User")
         postQuery.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
         postQuery.limit = 100
-        userQuery.includeKeys(["username"])
+        //userQuery.includeKeys(["username"])
         userQuery.limit = 100
         
         postQuery.findObjectsInBackground { (posts, error) in

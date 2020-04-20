@@ -40,6 +40,16 @@ class LoginViewController: UIViewController {
         
         user.signUpInBackground { (success, error) in
             if success {
+                let user = PFObject(className: "UserInfo")
+                
+                user["username"] = self.usernameField.text!
+                user.saveInBackground { (success, error) in
+                    if success {
+                        print("saved")
+                    } else {
+                        print("notsaved error")
+                    }
+                }
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print(error?.localizedDescription)
