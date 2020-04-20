@@ -17,6 +17,7 @@
 		2242BFF4243A949F0052A4F8 /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242BFF3243A949F0052A4F8 /* MainFeedViewController.swift */; };
 		2242BFF6243A961C0052A4F8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242BFF5243A961C0052A4F8 /* CameraViewController.swift */; };
 		2242BFF8243AA23E0052A4F8 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */; };
+		224F9B47244D5D4D00C9A01D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224F9B46244D5D4D00C9A01D /* SearchCell.swift */; };
 		229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229ECD7F24354B5A00C89402 /* LoginViewController.swift */; };
 		22B4D110243E876600A9EC8A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B4D10F243E876600A9EC8A /* CommentCell.swift */; };
 		3658B2C2BB320FE060AC7D70 /* Pods_PurdueMoonboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAFB6FE15BEFF2BB7A89AD8 /* Pods_PurdueMoonboard.framework */; };
@@ -56,6 +57,7 @@
 		2242BFF3243A949F0052A4F8 /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
 		2242BFF5243A961C0052A4F8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		2242BFF7243AA23E0052A4F8 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		224F9B46244D5D4D00C9A01D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		229ECD7F24354B5A00C89402 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22B4D10F243E876600A9EC8A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		50E395A606098C60445A8F22 /* Pods_PurdueMoonboardTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurdueMoonboardTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				C7FE1A032443EFDD00C4E797 /* DetailedPost.storyboard */,
 				E791C224243AC81C00D6B059 /* Search.storyboard */,
 				C7AFCD3F244D3CAB00B4A558 /* SearchViewController.swift */,
+				224F9B46244D5D4D00C9A01D /* SearchCell.swift */,
 				E791C222243AC7FC00D6B059 /* Profile.storyboard */,
 				E7AC1D6A244ABA360054131F /* ProfileHeaderView.swift */,
 				E78347832447C4E800A3A4F8 /* ProfileViewController.swift */,
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				229ECD8024354B5A00C89402 /* LoginViewController.swift in Sources */,
+				224F9B47244D5D4D00C9A01D /* SearchCell.swift in Sources */,
 				C7AFCD40244D3CAB00B4A558 /* SearchViewController.swift in Sources */,
 				220CC3AB2432A66500F711AA /* AppDelegate.swift in Sources */,
 				220CC3AD2432A66500F711AA /* SceneDelegate.swift in Sources */,
