@@ -28,19 +28,19 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileGridCell" id="VO1-oi-ySI" customClass="ProfileGridCell" customModule="PurdueMoonboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="186" width="193" height="194"/>
+                                        <rect key="frame" x="0.0" y="186" width="140" height="140"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vsj-FA-N2I">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="194"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7j3-U0-6Z7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="194"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="193" height="194"/>
+                                        <size key="customSize" width="140" height="140"/>
                                         <connections>
                                             <outlet property="posterView" destination="7j3-U0-6Z7" id="Aa6-Sf-hPE"/>
                                         </connections>
@@ -50,9 +50,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-Sf-50R">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-Sf-50R">
                                             <rect key="frame" x="156" y="8" width="103" height="103"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <gestureRecognizers/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="3vH-KZ-c5V" appends="YES" id="ws4-DO-JkB"/>
+                                            </connections>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-rU-X1c">
                                             <rect key="frame" x="190" y="119" width="53" height="42"/>
@@ -78,8 +82,56 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFf-QG-uBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3vH-KZ-c5V">
+                    <connections>
+                        <segue destination="xbs-nJ-nFa" kind="presentation" id="kAh-D3-IBJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-213.04347826086959" y="677.67857142857144"/>
+        </scene>
+        <!--Profile Image View Controller-->
+        <scene sceneID="w3c-Xl-Reg">
+            <objects>
+                <viewController id="xbs-nJ-nFa" customClass="ProfileImageViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vju-hA-lrg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-z4-wPF">
+                                <rect key="frame" x="87" y="36" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wgf-Zw-wah" appends="YES" id="4ud-cf-JzR"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-2r-dgx">
+                                <rect key="frame" x="152" y="385" width="111" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="onUpdateButton:" destination="xbs-nJ-nFa" eventType="touchUpInside" id="4kr-Wj-wkX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1sK-iB-X9y"/>
+                    </view>
+                    <connections>
+                        <outlet property="onUpdateButton" destination="T8S-2r-dgx" id="RUm-Xg-XYu"/>
+                        <outlet property="profileImage" destination="7ZO-z4-wPF" id="xtL-4l-gv0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfR-2H-Ai5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wgf-Zw-wah">
+                    <connections>
+                        <action selector="onCameraButton:" destination="xbs-nJ-nFa" id="Ucs-h9-Ura"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="855.07246376811599" y="679.6875"/>
         </scene>
         <!--Profile-->
         <scene sceneID="9xp-ML-FSY">
@@ -101,4 +153,8 @@
             <point key="canvasLocation" x="-1123.1884057971015" y="677.67857142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
 </document>

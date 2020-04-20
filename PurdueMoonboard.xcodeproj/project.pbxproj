@@ -31,6 +31,7 @@
 		E791C225243AC81C00D6B059 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C224243AC81C00D6B059 /* Search.storyboard */; };
 		E791C227243AC83200D6B059 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E791C226243AC83200D6B059 /* Feed.storyboard */; };
 		E7AC1D6B244ABA360054131F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AC1D6A244ABA360054131F /* ProfileHeaderView.swift */; };
+		E7EFCDF4244E5AC500062B1D /* ProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFCDF3244E5AC500062B1D /* ProfileImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E791C224243AC81C00D6B059 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		E791C226243AC83200D6B059 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		E7AC1D6A244ABA360054131F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		E7EFCDF3244E5AC500062B1D /* ProfileImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				224F9B46244D5D4D00C9A01D /* SearchPostCell.swift */,
 				224F9B48244D833100C9A01D /* SearchUserCell.swift */,
 				E791C222243AC7FC00D6B059 /* Profile.storyboard */,
+				E7EFCDF3244E5AC500062B1D /* ProfileImageViewController.swift */,
 				E7AC1D6A244ABA360054131F /* ProfileHeaderView.swift */,
 				E78347832447C4E800A3A4F8 /* ProfileViewController.swift */,
 				E78347812447C2E800A3A4F8 /* ProfileGridCell.swift */,
@@ -355,6 +358,7 @@
 				220CC3AB2432A66500F711AA /* AppDelegate.swift in Sources */,
 				224F9B49244D833100C9A01D /* SearchUserCell.swift in Sources */,
 				220CC3AD2432A66500F711AA /* SceneDelegate.swift in Sources */,
+				E7EFCDF4244E5AC500062B1D /* ProfileImageViewController.swift in Sources */,
 				2242BFF4243A949F0052A4F8 /* MainFeedViewController.swift in Sources */,
 				2242BFF6243A961C0052A4F8 /* CameraViewController.swift in Sources */,
 				2242BFF8243AA23E0052A4F8 /* PostTableViewCell.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class ProfileViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class ProfileViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     fileprivate let headerId = "headerId"
     
     var posts = [PFObject]()
@@ -46,6 +46,8 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
         header.Username.text = PFUser.current()?.username
+        //let query = PFQuery(className: "Userinfo")
+        //header.ProfileImage.af_setImage(withURL: <#T##URL#>)
         return header
     }
     
@@ -67,7 +69,23 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let Width = collectionView.bounds.width/3.0
+        let Height = Width
 
+        return CGSize(width: Width, height: Height)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
     /*
     // MARK: - Navigation
 
