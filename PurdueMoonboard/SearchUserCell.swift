@@ -1,5 +1,5 @@
 //
-//  SearchCell.swift
+//  SearchUserCell.swift
 //  PurdueMoonboard
 //
 //  Created by Sam on 4/20/20.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class SearchCell: UITableViewCell {
-    
+class SearchUserCell: UITableViewCell {
+
     @IBOutlet weak var usernameLabel: UILabel!
-    
-    @IBOutlet weak var vGrade: UILabel!
-    @IBOutlet weak var routeNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

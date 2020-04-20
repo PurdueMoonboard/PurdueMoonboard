@@ -12,7 +12,9 @@ import Parse
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var posts = [PFObject]()
+    var users = [PFObject]()
     var searchedPosts = [PFObject]()
+    var searchedUsers = false
 
     
     @IBOutlet weak var searchBar: UITextField!
@@ -38,17 +40,31 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        let query = PFQuery(className: "Posts")
-        query.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
-        query.limit = 20
+        let postQuery = PFQuery(className: "Posts")
+        let userQuery = PFQuery(className: "Users")
+        postQuery.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
+        postQuery.limit = 100
+        userQuery.includeKeys(["username"])
+        userQuery.limit = 100
         
-        query.findObjectsInBackground { (posts, error) in
+        postQuery.findObjectsInBackground { (posts, error) in
+            
             if posts != nil {
                 self.posts = posts!
                 self.posts = self.posts.reversed()
                 self.tableView.reloadData()
             }
         }
+        // Users is not getting filled?
+        userQuery.findObjectsInBackground { (users, error) in
+            print(users?.count) //User count will be wrapped in optional()
+            if users != nil {
+                self.users = users!
+                self.tableView.reloadData()
+                
+            }
+        }
+        print(users.count)
     }
     //MARK: Keyboard functions
     func hideKeyboardWhenTappedAround() {
@@ -71,20 +87,29 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell
-        let post = searchedPosts[indexPath.row]
-        let user = post["author"] as! PFUser
-        cell.usernameLabel.text = user.username
-        cell.vGrade.text = post["VGrade"] as? String
-        cell.vGrade.textColor = findVGradeColor(vGrade: cell.vGrade.text ?? "V0")
-        let routeName = post["route_name"] as? String
-        cell.routeNameLabel.text = "Route: " + (routeName ?? "No Name")
-        return cell
+        if searchedUsers {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "searchUserCell") as! SearchUserCell
+            let user = searchedPosts[indexPath.row]
+            cell.usernameLabel.text = user["username"] as? String
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchPostCell") as! SearchPostCell
+            let post = searchedPosts[indexPath.row]
+            let user = post["author"] as! PFUser
+            cell.usernameLabel.text = user.username
+            cell.vGrade.text = post["VGrade"] as? String
+            cell.vGrade.textColor = findVGradeColor(vGrade: cell.vGrade.text ?? "V0")
+            let routeName = post["route_name"] as? String
+            cell.routeNameLabel.text = "Route: " + (routeName ?? "No Name")
+            return cell
+        }
     }
     //MARK: Search functions
     @IBAction func onSearch(_ sender: Any) {
         searchedPosts = [PFObject]()
         if searchTabs.selectedSegmentIndex == 2 {
+            searchedUsers = false
+            
             let grade = Int(gradeSlider.value)
             for i in 0..<posts.count {
                 let post = posts[i]
@@ -98,6 +123,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         } else if searchTabs.selectedSegmentIndex == 1 {
+            searchedUsers = false
+
             for i in 0..<posts.count {
                 let post = posts[i]
                 var routeName = searchBar.text ?? ""
@@ -109,15 +136,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 }
             }
         } else {
-            // This needs to be changed to loop through users instead of posts
-            for i in 0..<posts.count {
-                let post = posts[i]
-                var username = searchBar.text ?? ""
+            // This is fine but users is empty
+            searchedUsers = true
+            for i in 0..<users.count {
+                let user = users[i]
+                var searchUsername = searchBar.text ?? ""
+                searchUsername = searchUsername.lowercased()
+                var username = user["username"] as? String ?? ""
+                print(username)
                 username = username.lowercased()
-                var postName = post["author"] as? String ?? ""
-                postName = postName.lowercased()
-                if postName.contains(username) {
-                    searchedPosts.append(post)
+                if username.contains(searchUsername) {
+                    searchedPosts.append(user)
                 }
             }
         }
