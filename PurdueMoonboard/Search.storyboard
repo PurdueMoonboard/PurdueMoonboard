@@ -31,20 +31,36 @@
                                     <action selector="onValueChanged:" destination="kxz-NY-d4T" eventType="valueChanged" id="7MV-2L-CxY"/>
                                 </connections>
                             </segmentedControl>
-                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-zh-lws">
-                                <rect key="frame" x="6" y="135" width="402" height="31"/>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="16" translatesAutoresizingMaskIntoConstraints="NO" id="jT9-zh-lws">
+                                <rect key="frame" x="6" y="135" width="352" height="31"/>
+                                <connections>
+                                    <action selector="onSliderChanged:" destination="kxz-NY-d4T" eventType="valueChanged" id="ri8-Ck-emd"/>
+                                    <action selector="onValueChanged:" destination="kxz-NY-d4T" eventType="valueChanged" id="rS5-yF-cdE"/>
+                                </connections>
                             </slider>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vs1-od-CIa">
+                                <rect key="frame" x="364" y="135" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vs1-od-CIa" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="CaJ-Cr-zwE"/>
                             <constraint firstItem="S09-aT-TSh" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="JkB-8Q-tRp"/>
                             <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="S09-aT-TSh" secondAttribute="trailing" constant="8" id="K0X-ak-Sc0"/>
+                            <constraint firstItem="vs1-od-CIa" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="KkC-i4-bAJ"/>
                             <constraint firstItem="HUz-3C-a6T" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="NTJ-A1-ycT"/>
                             <constraint firstItem="jT9-zh-lws" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="Pa2-hy-1kK"/>
+                            <constraint firstItem="jT9-zh-lws" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="QFw-Dw-bms"/>
                             <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="HUz-3C-a6T" secondAttribute="trailing" constant="8" id="Snd-3g-vU1"/>
-                            <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="jT9-zh-lws" secondAttribute="trailing" constant="8" id="Yvr-WP-jXH"/>
+                            <constraint firstItem="vs1-od-CIa" firstAttribute="leading" secondItem="jT9-zh-lws" secondAttribute="trailing" constant="8" id="TeO-OA-ANB"/>
+                            <constraint firstItem="jT9-zh-lws" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="Uy5-nw-0Ht"/>
                             <constraint firstItem="S09-aT-TSh" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="ac1-7j-4bw"/>
                             <constraint firstItem="jT9-zh-lws" firstAttribute="leading" secondItem="HIT-P3-Jsz" secondAttribute="leading" constant="8" id="bmp-yN-NZ7"/>
+                            <constraint firstItem="HIT-P3-Jsz" firstAttribute="trailing" secondItem="vs1-od-CIa" secondAttribute="trailing" constant="8" id="dND-Qo-wKP"/>
+                            <constraint firstItem="vs1-od-CIa" firstAttribute="leading" secondItem="jT9-zh-lws" secondAttribute="trailing" constant="8" id="e54-My-3Bs"/>
                             <constraint firstItem="HUz-3C-a6T" firstAttribute="top" secondItem="HIT-P3-Jsz" secondAttribute="top" constant="8" id="hWn-V7-0qQ"/>
                             <constraint firstItem="S09-aT-TSh" firstAttribute="top" secondItem="HUz-3C-a6T" secondAttribute="bottom" constant="8" id="rHS-mi-h8O"/>
                         </constraints>
@@ -55,6 +71,7 @@
                         <outlet property="gradeSlider" destination="jT9-zh-lws" id="j8v-pC-Xxs"/>
                         <outlet property="searchBar" destination="S09-aT-TSh" id="MY0-1s-XiQ"/>
                         <outlet property="searchTabs" destination="HUz-3C-a6T" id="Bz5-Ff-DIx"/>
+                        <outlet property="vGrade" destination="vs1-od-CIa" id="0Sn-sp-54u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ry-Gk-peR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
