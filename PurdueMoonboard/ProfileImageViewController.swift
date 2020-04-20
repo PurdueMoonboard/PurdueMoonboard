@@ -20,7 +20,7 @@ class ProfileImageViewController: UIViewController,UIImagePickerControllerDelega
     }
     
     @IBAction func onUpdateButton(_ sender: Any) {
-        let query = PFQuery(className: "Userinfo")
+        let query = PFQuery(className: "UserInfo")
         query.getObjectInBackground(withId: PFUser.current()!.objectId!){
             (user: PFObject?,error: Error?) in
              if let error = error {

@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     fileprivate let headerId = "headerId"
     
     var posts = [PFObject]()
+    var users = [PFObject]()
     var user = [PFObject]()
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -46,7 +47,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
         header.Username.text = PFUser.current()?.username
-        //let query = PFQuery(className: "Userinfo")
+        
         //header.ProfileImage.af_setImage(withURL: <#T##URL#>)
         return header
     }
