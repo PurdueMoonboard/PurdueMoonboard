@@ -45,26 +45,26 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchPostCell" id="Iur-QC-pXS" customClass="SearchPostCell" customModule="PurdueMoonboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iur-QC-pXS" id="tX5-3w-QQp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-1f-WFn">
-                                                    <rect key="frame" x="16" y="8" width="84" height="21.5"/>
+                                                    <rect key="frame" x="16" y="8" width="84" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5n-aX-5nO">
-                                                    <rect key="frame" x="108" y="8" width="47" height="21.5"/>
+                                                    <rect key="frame" x="108" y="8" width="47" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZU-eQ-pIj">
-                                                    <rect key="frame" x="163" y="8" width="94" height="21.5"/>
+                                                    <rect key="frame" x="163" y="8" width="94" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -87,10 +87,11 @@
                                             <outlet property="routeNameLabel" destination="bZU-eQ-pIj" id="3Hn-e9-YMI"/>
                                             <outlet property="usernameLabel" destination="s0j-1f-WFn" id="D4c-0b-5X2"/>
                                             <outlet property="vGrade" destination="v5n-aX-5nO" id="b4s-jo-6Ke"/>
+                                            <segue destination="9Rz-pK-poc" kind="showDetail" id="IzL-4v-j2f"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchUserCell" id="554-ku-UcF" customClass="SearchUserCell" customModule="PurdueMoonboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="65" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="554-ku-UcF" id="sme-UT-UZv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -171,10 +172,18 @@
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="-3.3482142857142856"/>
         </scene>
+        <!--DetailedPost-->
+        <scene sceneID="dxr-US-zqo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailedPost" id="9Rz-pK-poc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grK-ds-615" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="-18"/>
+        </scene>
         <!--Search-->
         <scene sceneID="eLC-BU-NfY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PxT-BR-rYx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SearchNavController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PxT-BR-rYx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" id="lQk-EV-jIe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bTO-9Q-xD4">
