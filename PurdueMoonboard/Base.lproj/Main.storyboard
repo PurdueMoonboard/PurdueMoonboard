@@ -57,8 +57,8 @@
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rew-cM-nU4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Purdue Moonboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIp-eV-VPE">
-                                <rect key="frame" x="52" y="90" width="311" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purdue Moonboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIp-eV-VPE">
+                                <rect key="frame" x="0.0" y="90" width="414" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="5Zw-gc-pfX"/>
                                 </constraints>
@@ -88,8 +88,9 @@
                             <constraint firstItem="hbt-ym-7ey" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gNM-Pk-anb"/>
                             <constraint firstItem="WMC-hG-uY6" firstAttribute="height" secondItem="TJs-IW-77W" secondAttribute="height" id="jcz-mo-7Tv"/>
                             <constraint firstItem="O3q-c6-mgo" firstAttribute="top" secondItem="hbt-ym-7ey" secondAttribute="bottom" constant="30" id="khV-1Q-lNd"/>
+                            <constraint firstItem="yIp-eV-VPE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oCA-Ap-ZQ2"/>
+                            <constraint firstItem="yIp-eV-VPE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ota-b1-zW0"/>
                             <constraint firstItem="WMC-hG-uY6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-75" id="qdL-1a-4PN"/>
-                            <constraint firstItem="yIp-eV-VPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="xwW-cC-io5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
