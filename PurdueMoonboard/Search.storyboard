@@ -108,6 +108,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="usernameLabel" destination="GRC-5s-FWO" id="te8-35-2UX"/>
+                                            <segue destination="lSQ-Gm-vzT" kind="presentation" id="rBK-Wc-cmy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -171,6 +172,14 @@
                 <exit id="6E5-Rf-TiW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-255.07246376811597" y="-3.3482142857142856"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Psv-Au-NcG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="lSQ-Gm-vzT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vb-rd-V6p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-128"/>
         </scene>
         <!--DetailedPost-->
         <scene sceneID="dxr-US-zqo">

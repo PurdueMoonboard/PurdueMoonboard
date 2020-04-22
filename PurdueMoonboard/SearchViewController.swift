@@ -198,14 +198,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Find the selected movie
+        // Find the selected cell
         print("running prepare")
         let cell = sender as! UITableViewCell
         let indexPath = tableView.indexPath(for: cell)!
-
-        //Pass the selected movie to the details view controller
-        let detailsViewController = segue.destination as! DetailPostViewController
-        detailsViewController.post = posts[indexPath.row]
+        if searchedUsers {
+            
+        } else {
+            //Pass the selected movie to the details view controller
+            let detailsViewController = segue.destination as! DetailPostViewController
+            detailsViewController.post = posts[indexPath.row]
+        }
+        
     
         
         tableView.deselectRow(at: indexPath, animated: true)
