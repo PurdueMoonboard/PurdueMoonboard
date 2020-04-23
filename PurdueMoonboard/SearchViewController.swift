@@ -207,10 +207,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         } else {
             //Pass the selected movie to the details view controller
             let detailsViewController = segue.destination as! DetailPostViewController
-            detailsViewController.post = posts[indexPath.row]
+            detailsViewController.post = searchedPosts[indexPath.row]
         }
-        
-    
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
