@@ -57,14 +57,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         // Users is not getting filled?
         userQuery.findObjectsInBackground { (users, error) in
-            print(users?.count) //User count will be wrapped in optional()
             if users != nil {
                 self.users = users!
                 self.tableView.reloadData()
                 
             }
         }
-        print(users.count)
     }
     //MARK: Keyboard functions
     func hideKeyboardWhenTappedAround() {
@@ -82,7 +80,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: Table View Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("ran \(searchedPosts.count)")
         return searchedPosts.count
     }
     
@@ -104,6 +101,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cell
         }
     }
+    
     //MARK: Search functions
     @IBAction func onSearch(_ sender: Any) {
         searchedPosts = [PFObject]()
@@ -118,7 +116,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 let postGrade = Int(mutatedGrade)
                 if postGrade == grade {
-                    print("found one")
                     searchedPosts.append(post)
                 }
             }
@@ -143,7 +140,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 var searchUsername = searchBar.text ?? ""
                 searchUsername = searchUsername.lowercased()
                 var username = user["username"] as? String ?? ""
-                print(username)
                 username = username.lowercased()
                 if username.contains(searchUsername) {
                     searchedPosts.append(user)
@@ -197,14 +193,25 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Find the selected cell
+        print("running prepare")
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        if searchedUsers {
+            
+        } else {
+            //Pass the selected movie to the details view controller
+            let detailsViewController = segue.destination as! DetailPostViewController
+            detailsViewController.post = searchedPosts[indexPath.row]
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+    
 
 }
