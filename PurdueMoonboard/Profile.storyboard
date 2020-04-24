@@ -2,12 +2,20 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gVr-kZ-Fkb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--DetailedPost-->
+        <scene sceneID="5yq-hh-Wmz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailedPost" id="2Lw-na-RWw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKH-My-8qO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="1120"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="tqf-bV-q4E">
             <objects>
@@ -43,6 +51,7 @@
                                         <size key="customSize" width="140" height="140"/>
                                         <connections>
                                             <outlet property="posterView" destination="7j3-U0-6Z7" id="Aa6-Sf-hPE"/>
+                                            <segue destination="2Lw-na-RWw" kind="presentation" id="rBr-QD-ANM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -92,7 +101,6 @@
         <!--Profile Image View Controller-->
         <scene sceneID="w3c-Xl-Reg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfR-2H-Ai5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="xbs-nJ-nFa" customClass="ProfileImageViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vju-hA-lrg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -131,6 +139,7 @@
                         <outlet property="imageView" destination="7ZO-z4-wPF" id="9Ez-7o-dYX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfR-2H-Ai5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wgf-Zw-wah">
                     <connections>
                         <action selector="onCameraButton:" destination="xbs-nJ-nFa" id="AFl-6u-NPe"/>
