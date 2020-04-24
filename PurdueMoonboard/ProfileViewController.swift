@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     var posts = [PFObject]()
     var users = [PFObject]()
-    var user = [PFObject]()
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -41,14 +40,35 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
                 self.collectionView.reloadData()
             }
         }
+        let q2 = PFQuery(className:"UserInfo")
+        q2.whereKey("username", equalTo: PFUser.current()!.username!)
+        q2.findObjectsInBackground { (users, error) in
+            print(users?.count) //User count will be wrapped in optional()
+            if users != nil {
+                self.users = users!
+                self.collectionView.reloadData()
+                
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
         header.Username.text = PFUser.current()?.username
-        
-        //header.ProfileImage.af_setImage(withURL: <#T##URL#>)
+        if(users.count > 0){
+            let user = users[0]
+            if user["profileImage"] != nil{
+                let imageFile = user["profileImage"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                
+                
+                header.ProfileImage.af_setImage(withURL: url)
+            }
+            
+        }
+       
         return header
     }
     
@@ -87,7 +107,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-    /*
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
