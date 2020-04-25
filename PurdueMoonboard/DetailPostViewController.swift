@@ -33,6 +33,7 @@ class DetailPostViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.keyboardDismissMode = .interactive
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object:  nil)
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let post = self.post

@@ -31,6 +31,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         print("viewDidAppear called")
         let query = PFQuery(className: "Posts")
         query.whereKey("author", equalTo: PFUser.current()!)
+        query.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -47,7 +48,6 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
             if users != nil {
                 self.users = users!
                 self.collectionView.reloadData()
-                
             }
         }
     }
@@ -115,9 +115,12 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         // Pass the selected object to the new view controller.
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
-                
+        
         let detailsViewController = segue.destination as! DetailPostViewController
         detailsViewController.post = posts[indexPath.row]
+        
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
         
     }
     
