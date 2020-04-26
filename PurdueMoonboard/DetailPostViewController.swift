@@ -96,7 +96,18 @@ class DetailPostViewController: UIViewController, UITableViewDelegate, UITableVi
         showsCommentBar = false
         becomeFirstResponder()
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comments = (post?["comments"] as? [PFObject]) ?? []
+        
+        if indexPath.row == comments.count + 1 {
+            showsCommentBar = true
+            becomeFirstResponder()
+            commentBar.inputTextView.becomeFirstResponder()
+            if self.traitCollection.userInterfaceStyle == .dark {
+                commentBar.inputTextView.textColor = .black
+            }
+        }
+    }
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         
         let comment = PFObject(className: "Comments")

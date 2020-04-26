@@ -141,6 +141,9 @@ class MainFeedViewController: UIViewController, UITableViewDelegate, UITableView
             showsCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
+            if self.traitCollection.userInterfaceStyle == .dark {
+                commentBar.inputTextView.textColor = .black
+            }
         }
         selectedPost = post
     }
