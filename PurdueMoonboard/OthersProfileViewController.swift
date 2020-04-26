@@ -31,6 +31,11 @@ class OthersProfileViewController: UIViewController,UICollectionViewDataSource,U
     
         // Do any additional setup after loading the view.
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("viewDidAppear called")
@@ -59,7 +64,8 @@ class OthersProfileViewController: UIViewController,UICollectionViewDataSource,U
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
-        
+        header.ProfileImage.layer.cornerRadius = header.ProfileImage.frame.size.width/2
+        header.ProfileImage.clipsToBounds = true
         header.Username.text = userInfo["username"] as? String
         if(users.count > 0){
             let user = users[0]
