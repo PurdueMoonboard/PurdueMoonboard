@@ -42,7 +42,6 @@ class ProfileImageViewController: UIViewController,UIImagePickerControllerDelega
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
-        print("YET")
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -61,6 +60,7 @@ class ProfileImageViewController: UIViewController,UIImagePickerControllerDelega
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af_imageScaled(to: size)
         imageView.image = scaledImage
+        
         
         dismiss(animated: true, completion: nil)
     }

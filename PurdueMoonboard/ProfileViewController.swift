@@ -23,10 +23,14 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-
         
     
         // Do any additional setup after loading the view.
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,10 +62,12 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         
         
     }
-    
+    //header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         print("called update header")
+        header.ProfileImage.layer.cornerRadius = header.ProfileImage.frame.size.width/2
+        header.ProfileImage.clipsToBounds = true
         header.Username.text = PFUser.current()?.username
         if(users.count > 0){
             let user = users[0]

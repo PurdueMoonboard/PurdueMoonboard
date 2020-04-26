@@ -183,7 +183,7 @@
         <scene sceneID="9xp-ML-FSY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gVr-kZ-Fkb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="8WM-NA-qyR"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="8WM-NA-qyR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jaA-BG-oft">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -202,6 +202,7 @@
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

@@ -119,14 +119,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCommentCell" id="pJd-7q-nt8">
-                                        <rect key="frame" x="0.0" y="616" width="414" height="37.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="616" width="414" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pJd-7q-nt8" id="p4W-sk-yQL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-JD-oBn">
-                                                    <rect key="frame" x="16" y="7.9999999999999982" width="390" height="21.333333333333329"/>
+                                                    <rect key="frame" x="16" y="8" width="390" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -313,7 +313,7 @@
         <scene sceneID="Mjd-X9-Ans">
             <objects>
                 <navigationController storyboardIdentifier="MainFeedNavigationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UZd-Tx-3CX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="UeR-dw-EN8"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feedclimb" id="UeR-dw-EN8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MaW-kq-vL7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -328,6 +328,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="feedclimb" width="25" height="25"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
     </resources>
