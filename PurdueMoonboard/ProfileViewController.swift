@@ -15,8 +15,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     
     var posts = [PFObject]()
     var users = [PFObject]()
-    
-    @IBOutlet weak var profileHeader: ProfileHeaderView!
+
     var selectedPost = false
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -46,6 +45,7 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         }
         let q2 = PFQuery(className:"UserInfo")
         q2.whereKey("username", equalTo: PFUser.current()!.username!)
+        q2.includeKeys(["username", "user", "posts", "profileImage"])
         q2.findObjectsInBackground { (users, error) in
             print(users?.count) //User count will be wrapped in optional()
             if users != nil {
@@ -54,7 +54,8 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
             }
         }
         self.collectionView.reloadData()
-        //Updating header after picking image
+        
+        
         
     }
     
@@ -95,6 +96,9 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedPost = true
+        self.performSegue(withIdentifier: "DetailSegue", sender: indexPath)
+        selectedPost = false
+    
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let Width = collectionView.bounds.width/3.0
@@ -114,20 +118,18 @@ class ProfileViewController: UIViewController,UICollectionViewDataSource,UIColle
         return 0
     }
     
-    @IBAction func onProfileImageButton(_ sender: Any) {
-        selectedPost = false
-    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
         if selectedPost {
-            let cell = sender as! UICollectionViewCell
-            let indexPath = collectionView.indexPath(for: cell)!
+            let indexPath = sender as! IndexPath
             
             let detailsViewController = segue.destination as! DetailPostViewController
+            print(posts[indexPath.row])
             detailsViewController.post = posts[indexPath.row]
             
             collectionView.deselectItem(at: indexPath, animated: true)

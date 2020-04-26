@@ -50,7 +50,6 @@
                                         <size key="customSize" width="140" height="140"/>
                                         <connections>
                                             <outlet property="posterView" destination="7j3-U0-6Z7" id="Aa6-Sf-hPE"/>
-                                            <segue destination="2Lw-na-RWw" kind="presentation" id="rBr-QD-ANM"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -110,6 +109,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="oMS-7U-9rj" id="laM-pd-mzS"/>
+                        <segue destination="2Lw-na-RWw" kind="presentation" identifier="DetailSegue" id="JU9-Pu-CJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFf-QG-uBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
