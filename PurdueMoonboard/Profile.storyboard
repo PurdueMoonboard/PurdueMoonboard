@@ -16,7 +16,7 @@
             </objects>
             <point key="canvasLocation" x="288" y="1120"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="tqf-bV-q4E">
             <objects>
                 <viewController id="YKj-AT-DEZ" customClass="ProfileViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,9 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oMS-7U-9rj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oMS-7U-9rj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ez0-8w-raD">
                                     <size key="itemSize" width="193" height="194"/>
@@ -59,20 +58,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-Sf-50R">
-                                            <rect key="frame" x="156" y="29" width="103" height="103"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jzr-Sf-50R">
+                                            <rect key="frame" x="155.5" y="31.5" width="103" height="100.5"/>
                                             <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="103" id="2C4-bl-7fe"/>
+                                                <constraint firstAttribute="height" constant="103" id="dWP-Tk-dqV"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-rU-X1c">
-                                            <rect key="frame" x="190" y="134" width="53" height="42"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-rU-X1c">
+                                            <rect key="frame" x="78" y="136" width="259" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="tkO-ng-aFR"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Y7H-rU-X1c" firstAttribute="centerX" secondItem="Jzr-Sf-50R" secondAttribute="centerX" id="3kj-TE-TAa"/>
+                                        <constraint firstItem="Y7H-rU-X1c" firstAttribute="leading" secondItem="NHE-bZ-19m" secondAttribute="leadingMargin" constant="70" id="7qe-7N-ymX"/>
+                                        <constraint firstItem="Y7H-rU-X1c" firstAttribute="top" secondItem="Jzr-Sf-50R" secondAttribute="bottom" constant="3" id="JyE-JM-gqK"/>
+                                        <constraint firstItem="Y7H-rU-X1c" firstAttribute="centerX" secondItem="NHE-bZ-19m" secondAttribute="centerX" id="Zfd-Ja-fmP"/>
+                                        <constraint firstItem="Y7H-rU-X1c" firstAttribute="bottom" secondItem="NHE-bZ-19m" secondAttribute="bottomMargin" id="vt7-fC-hb9"/>
+                                    </constraints>
                                     <connections>
                                         <outlet property="ProfileImage" destination="Jzr-Sf-50R" id="yhp-O4-peR"/>
                                         <outlet property="Username" destination="Y7H-rU-X1c" id="EyF-GK-lbP"/>
@@ -81,12 +92,19 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vty-uR-Q3J" firstAttribute="bottom" secondItem="oMS-7U-9rj" secondAttribute="bottom" id="PVu-30-r4E"/>
+                            <constraint firstItem="oMS-7U-9rj" firstAttribute="leading" secondItem="vty-uR-Q3J" secondAttribute="leading" id="aPd-pI-Esd"/>
+                            <constraint firstItem="oMS-7U-9rj" firstAttribute="top" secondItem="xZf-ws-3Mp" secondAttribute="top" id="gqy-Z9-7do"/>
+                            <constraint firstItem="oMS-7U-9rj" firstAttribute="trailing" secondItem="vty-uR-Q3J" secondAttribute="trailing" id="suI-QK-xOc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vty-uR-Q3J"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UDM-n1-Fmp">
+                    <navigationItem key="navigationItem" title="Profile" id="UDM-n1-Fmp">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="SjY-Mz-2WX">
                             <connections>
-                                <segue destination="xbs-nJ-nFa" kind="presentation" id="KMN-Nz-R4V"/>
+                                <action selector="onProfileImageButton:" destination="YKj-AT-DEZ" id="0ha-hy-gic"/>
+                                <segue destination="xbs-nJ-nFa" kind="presentation" modalPresentationStyle="fullScreen" id="KMN-Nz-R4V"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -103,36 +121,49 @@
             <objects>
                 <viewController id="xbs-nJ-nFa" customClass="ProfileImageViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vju-hA-lrg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-z4-wPF">
-                                <rect key="frame" x="87" y="36" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="wgf-Zw-wah" appends="YES" id="4ud-cf-JzR"/>
-                                </connections>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-2r-dgx">
-                                <rect key="frame" x="152" y="385" width="111" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8S-2r-dgx">
+                                <rect key="frame" x="152" y="385" width="110" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="9QG-DN-HK4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="onUpdateButton:" destination="xbs-nJ-nFa" eventType="touchUpInside" id="EK8-WE-XNU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os4-Ip-Rf6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os4-Ip-Rf6">
                                 <rect key="frame" x="183" y="491" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="onCancel:" destination="xbs-nJ-nFa" eventType="touchUpInside" id="B6e-Mn-y11"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-z4-wPF">
+                                <rect key="frame" x="87" y="109.5" width="240" height="238"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="cfl-4n-2Lt"/>
+                                    <constraint firstAttribute="width" constant="240" id="egf-OG-9KH"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wgf-Zw-wah" appends="YES" id="4ud-cf-JzR"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="top" secondItem="vju-hA-lrg" secondAttribute="top" constant="385" id="GLs-Z0-MgD"/>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="centerX" secondItem="os4-Ip-Rf6" secondAttribute="centerX" id="WN6-ay-SWA"/>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="centerX" secondItem="7ZO-z4-wPF" secondAttribute="centerX" id="bCY-2U-KHv"/>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="leading" secondItem="1sK-iB-X9y" secondAttribute="leading" constant="152" id="eiC-Dt-aXt"/>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="top" secondItem="7ZO-z4-wPF" secondAttribute="bottom" constant="36" id="ln3-IX-e0m"/>
+                            <constraint firstItem="T8S-2r-dgx" firstAttribute="centerX" secondItem="vju-hA-lrg" secondAttribute="centerX" id="nVe-aC-oCO"/>
+                            <constraint firstItem="os4-Ip-Rf6" firstAttribute="top" secondItem="T8S-2r-dgx" secondAttribute="bottom" constant="8" id="sjT-Ts-dzi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1sK-iB-X9y"/>
                     </view>
                     <connections>

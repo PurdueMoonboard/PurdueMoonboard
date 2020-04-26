@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Njb-mm-r3v">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Others Profile View Controller-->
+        <scene sceneID="2Sa-xb-UL4">
+            <objects>
+                <viewController id="Njb-mm-r3v" customClass="OthersProfileViewController" customModule="PurdueMoonboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fxW-Ch-jTd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pP9-YW-NvR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xjg-Rw-OWq">
+                                    <size key="itemSize" width="193" height="194"/>
+                                    <size key="headerReferenceSize" width="50" height="186"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileGridCell" id="q1d-NH-yvz" customClass="ProfileGridCell" customModule="PurdueMoonboard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="186" width="140" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="81T-Z3-HwP">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tI3-30-4EY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="140" height="140"/>
+                                        <connections>
+                                            <outlet property="posterView" destination="tI3-30-4EY" id="YSW-KW-zRK"/>
+                                            <segue destination="4Au-KP-TM1" kind="presentation" id="aeR-K3-kVr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProfileHeaderView" id="aBs-gU-Uib" customClass="ProfileHeaderView" customModule="PurdueMoonboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="D6X-Xr-Lys">
+                                            <rect key="frame" x="155.5" y="31.5" width="103" height="100.5"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="103" id="Jd1-WP-Bv7"/>
+                                                <constraint firstAttribute="width" constant="103" id="ZAz-uv-yf9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3U-F2-set">
+                                            <rect key="frame" x="78" y="136" width="258" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="RGp-P2-cQG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="B3U-F2-set" firstAttribute="bottom" secondItem="aBs-gU-Uib" secondAttribute="bottomMargin" id="1ws-qY-7Hk"/>
+                                        <constraint firstItem="B3U-F2-set" firstAttribute="centerX" secondItem="D6X-Xr-Lys" secondAttribute="centerX" id="7vb-K9-0MZ"/>
+                                        <constraint firstItem="B3U-F2-set" firstAttribute="top" secondItem="D6X-Xr-Lys" secondAttribute="bottom" constant="3" id="N0v-j5-lW1"/>
+                                        <constraint firstItem="B3U-F2-set" firstAttribute="centerX" secondItem="aBs-gU-Uib" secondAttribute="centerX" id="R8S-cT-DhY"/>
+                                        <constraint firstItem="B3U-F2-set" firstAttribute="leading" secondItem="aBs-gU-Uib" secondAttribute="leadingMargin" constant="70" id="fFT-Bm-uRH"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="ProfileImage" destination="D6X-Xr-Lys" id="5fd-Zc-Jcb"/>
+                                        <outlet property="Username" destination="B3U-F2-set" id="pAr-kL-Rjr"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWd-Ls-elj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="QCE-rF-FOj">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="P55-gy-I2V">
+                                            <connections>
+                                                <action selector="onBack:" destination="Njb-mm-r3v" id="dgo-5U-BB7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pP9-YW-NvR" firstAttribute="top" secondItem="uWd-Ls-elj" secondAttribute="top" constant="44" id="HLo-8I-vSh"/>
+                            <constraint firstItem="uWd-Ls-elj" firstAttribute="top" secondItem="QE3-Ve-bFs" secondAttribute="top" id="Inc-jP-RRy"/>
+                            <constraint firstItem="pP9-YW-NvR" firstAttribute="leading" secondItem="QE3-Ve-bFs" secondAttribute="leading" id="KP5-al-cbt"/>
+                            <constraint firstItem="QE3-Ve-bFs" firstAttribute="bottom" secondItem="pP9-YW-NvR" secondAttribute="bottom" id="XBi-a8-Qd1"/>
+                            <constraint firstItem="uWd-Ls-elj" firstAttribute="trailing" secondItem="pP9-YW-NvR" secondAttribute="trailing" id="rxb-qD-EpP"/>
+                            <constraint firstItem="uWd-Ls-elj" firstAttribute="leading" secondItem="pP9-YW-NvR" secondAttribute="leading" id="s6f-Cr-Jbr"/>
+                            <constraint firstItem="pP9-YW-NvR" firstAttribute="trailing" secondItem="QE3-Ve-bFs" secondAttribute="trailing" id="xJS-rD-66O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QE3-Ve-bFs"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="pP9-YW-NvR" id="3JO-ej-tH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8u-iu-QVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="-116.51785714285714"/>
+        </scene>
+        <!--DetailedPost-->
+        <scene sceneID="ICt-wv-ydm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailedPost" id="4Au-KP-TM1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4b-ZL-MAI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+    </resources>
+</document>

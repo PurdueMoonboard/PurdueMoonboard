@@ -204,6 +204,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let indexPath = tableView.indexPath(for: cell)!
         if searchedUsers {
             
+            let othersProfileViewController = segue.destination as! OthersProfileViewController
+            othersProfileViewController.userInfo = searchedPosts[indexPath.row]
+            othersProfileViewController.user = searchedPosts[indexPath.row]["user"] as! PFUser
         } else {
             //Pass the selected movie to the details view controller
             let detailsViewController = segue.destination as! DetailPostViewController
