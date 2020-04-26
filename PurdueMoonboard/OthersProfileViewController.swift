@@ -61,7 +61,7 @@ class OthersProfileViewController: UIViewController,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
-        header.Username.text = user.username
+        header.Username.text = userInfo["username"] as! String
         if(users.count > 0){
             let user = users[0]
             if user["profileImage"] != nil{
