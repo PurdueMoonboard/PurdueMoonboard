@@ -49,7 +49,6 @@ class OthersProfileViewController: UIViewController,UICollectionViewDataSource,U
         let q2 = PFQuery(className:"UserInfo")
         q2.whereKey("username", equalTo: userInfo["username"] as Any)
         q2.findObjectsInBackground { (users, error) in
-            print(users?.count) //User count will be wrapped in optional()
             if users != nil {
                 self.users = users!
                 self.collectionView.reloadData()
@@ -61,7 +60,7 @@ class OthersProfileViewController: UIViewController,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ProfileHeaderView", for: indexPath) as! ProfileHeaderView
         
-        header.Username.text = userInfo["username"] as! String
+        header.Username.text = userInfo["username"] as? String
         if(users.count > 0){
             let user = users[0]
             if user["profileImage"] != nil{
