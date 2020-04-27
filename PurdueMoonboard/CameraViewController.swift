@@ -53,7 +53,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         post["route_name"] = routeNameField.text!
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()
-        
         let imageData = imageView.image!.pngData()
         let imageName:String = "\(Int.random(in:  0..<1000000))image.png"
         let file = PFFileObject(name: imageName, data: imageData!)
@@ -68,6 +67,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             } else if let objects = objects {
                 print("got user info \(objects.count)")
                 for object in objects {
+                    post["userInfo"] = object
                     object.add(post, forKey: "posts")
                     object.saveInBackground { (succes, error) in
                         if succes {

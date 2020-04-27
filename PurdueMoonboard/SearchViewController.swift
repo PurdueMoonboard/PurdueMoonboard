@@ -44,7 +44,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let userQuery = PFQuery(className: "UserInfo")
         postQuery.includeKeys(["author", "comments", "comments.author", "VGrade", "route_name"])
         postQuery.limit = 100
-        userQuery.includeKeys(["username"])
+        userQuery.includeKeys(["username", "profileImage"])
         userQuery.limit = 100
         
         postQuery.findObjectsInBackground { (posts, error) in
@@ -88,6 +88,12 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let cell = tableView.dequeueReusableCell(withIdentifier: "searchUserCell") as! SearchUserCell
             let user = searchedPosts[indexPath.row]
             cell.usernameLabel.text = user["username"] as? String
+            let imageFile = user["profileImage"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            cell.userImage.af_setImage(withURL: url)
+            cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width/2
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchPostCell") as! SearchPostCell
@@ -98,6 +104,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             cell.vGrade.textColor = findVGradeColor(vGrade: cell.vGrade.text ?? "V0")
             let routeName = post["route_name"] as? String
             cell.routeNameLabel.text = "Route: " + (routeName ?? "No Name")
+            
+            let userInfo = post["userInfo"] as! PFObject
+            
+            do {
+                try userInfo.fetchIfNeeded()
+                let imageFile = userInfo["profileImage"] as! PFFileObject
+                let urlString = imageFile.url!
+                let url = URL(string: urlString)!
+                cell.userImage.af_setImage(withURL: url)
+                cell.userImage.layer.cornerRadius = cell.userImage.frame.size.width/2
+            } catch _ {
+                print("didnt get image for profile")
+            }
+            
             return cell
         }
     }
